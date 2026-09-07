@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title and page.url != "/" %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}, {{ site.tagline }}{% endif %}</title>
+<meta name="description" content="{{ page.summary | default: site.description | strip_newlines }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F8F8F6; --ink:#191D21; --muted:#5C666E; --rule:#DCDFE1;
+  --signal:#1B4D5A; --paper-deep:#F1F1EE;
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"IBM Plex Sans",system-ui,sans-serif;
+  --measure:34rem;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--serif); font-size:19px; line-height:1.62;
+  font-weight:300; font-optical-sizing:auto;
+}
+.wrap{max-width:60rem;margin:0 auto;padding:0 2rem}
+
+/* ---------- masthead ---------- */
+.masthead{padding:2.4rem 0 0}
+.masthead .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:2rem;flex-wrap:wrap}
+.sitename{font-family:var(--sans);font-size:.9rem;font-weight:500;letter-spacing:.01em;text-decoration:none;color:var(--ink)}
+.masthead nav{font-family:var(--sans);font-size:.85rem}
+.masthead nav a{color:var(--muted);text-decoration:none;margin-left:1.4rem}
+.masthead nav a:hover{color:var(--signal);text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- shared grid: margin column + prose ---------- */
+.row{
+  display:grid;grid-template-columns:9.5rem 1fr;gap:2.5rem;
+  padding:1.5rem 0;border-top:1px solid var(--rule);
+}
+.row .label{
+  font-family:var(--sans);font-size:.78rem;line-height:1.5;
+  color:var(--muted);padding-top:.42rem;
+}
+.row .body>*:first-child{margin-top:0}
+.row .body>*:last-child{margin-bottom:0}
+
+/* ---------- hero ---------- */
+.hero{padding:5rem 0 3.5rem}
+.hero h1{
+  font-family:var(--serif);font-weight:300;font-size:clamp(2.1rem,5.2vw,3.4rem);
+  line-height:1.14;letter-spacing:-.015em;margin:0 0 1.6rem;max-width:22ch;
+}
+.hero .standfirst{max-width:var(--measure);margin:0;color:#2C343B}
+
+/* ---------- section headings ---------- */
+h2.section{
+  font-family:var(--sans);font-size:.82rem;font-weight:500;color:var(--muted);
+  margin:4rem 0 .2rem;
+}
+.rows{border-bottom:1px solid var(--rule)}
+
+/* ---------- work entries ---------- */
+.entry h3{font-family:var(--serif);font-weight:400;font-size:1.42rem;line-height:1.28;margin:0 0 .5rem;letter-spacing:-.01em}
+.entry h3 a{color:var(--ink);text-decoration:none;background-image:linear-gradient(var(--signal),var(--signal));background-size:100% 1px;background-position:0 100%;background-repeat:no-repeat;padding-bottom:2px}
+.entry h3 a:hover{color:var(--signal)}
+.entry p{margin:0;max-width:var(--measure);color:#2C343B;font-size:1.02rem}
+.entry.draft h3{color:var(--muted);font-style:italic}
+.status{font-family:var(--sans);font-size:.72rem;color:var(--muted);display:block;margin-top:.5rem}
+
+/* ---------- article ---------- */
+.article{padding:3.5rem 0 1rem}
+.article-head{border-bottom:1px solid var(--rule);padding-bottom:2rem;margin-bottom:2.5rem}
+.article-head h1{font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:1.16;letter-spacing:-.015em;margin:0 0 1.1rem;max-width:24ch}
+.article-head .summary{max-width:var(--measure);margin:0 0 1.4rem;color:#2C343B}
+.article-head .facts{font-family:var(--sans);font-size:.8rem;color:var(--muted);line-height:1.9}
+.article-head .facts span{display:block}
+.prose{max-width:var(--measure)}
+.prose h2{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.3;margin:3.2rem 0 .9rem;letter-spacing:-.01em}
+.prose h2:first-child{margin-top:0}
+.prose h3{font-family:var(--sans);font-size:.95rem;font-weight:500;margin:2rem 0 .6rem}
+.prose p{margin:0 0 1.15rem}
+.prose ul{margin:0 0 1.3rem;padding-left:1.1rem}
+.prose li{margin-bottom:.5rem}
+.prose strong{font-weight:500;color:var(--ink)}
+.prose em{font-style:italic}
+.prose hr{border:0;border-top:1px solid var(--rule);margin:2.6rem 0}
+.prose a{color:var(--signal)}
+.prose img{
+  display:block;width:100%;height:auto;margin:2rem 0 .7rem;
+  border:1px solid var(--rule);background:#fff;
+}
+.prose p>em:only-child{
+  display:block;font-family:var(--sans);font-style:normal;font-size:.8rem;
+  color:var(--muted);line-height:1.6;max-width:30rem;
+}
+.prose blockquote{margin:0 0 1.3rem;padding-left:1.1rem;border-left:2px solid var(--signal);color:#2C343B}
+
+/* figures reach a little past the measure where there's room; degrades safely */
+@media (min-width:64rem){
+  .prose p:has(> img){margin-left:-6rem;width:calc(100% + 6rem)}
+  .prose p:has(> img) + p > em:only-child{margin-left:-6rem}
+}
+
+/* ---------- footer ---------- */
+footer{margin-top:5rem;border-top:1px solid var(--rule);padding:2rem 0 4rem;background:var(--paper-deep)}
+footer .wrap{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--signal)}
+
+a:focus-visible,button:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+@media (max-width:44rem){
+  body{font-size:18px}
+  .wrap{padding:0 1.4rem}
+  .hero{padding:3rem 0 2.4rem}
+  .row{grid-template-columns:1fr;gap:.55rem;padding:1.4rem 0}
+  .row .label{padding-top:0}
+  .prose img{width:100%;margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <a class="sitename" href="{{ site.baseurl }}/">Ashish Srivastava</a>
+    <nav>
+      <a href="{{ site.baseurl }}/#work">Work</a>
+      <a href="https://linkedin.com/in/ashishsrivastava">LinkedIn</a>
+      <a href="mailto:{{ site.email }}">Email</a>
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+<footer>
+  <div class="wrap">
+    <div>Ashish Srivastava, senior product manager. Gurugram, India.</div>
+    <div><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+  </div>
+</footer>
+</body>
+</html>
