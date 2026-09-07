@@ -7,6 +7,7 @@ description: >-
 # Change this one line if you ever move to a custom domain.
 url: "https://ashishsrivastava1406.github.io"
 baseurl: ""
+header_pages: []
 
 theme: minima
 plugins:
