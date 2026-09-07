@@ -1,15 +1,13 @@
 title: Ashish Srivastava
-tagline: Senior Product Manager — Consumer Growth and Platform
+tagline: senior product manager
+email: ashish.sahai14@gmail.com
 description: >-
-  Product case studies on growth, monetisation and platform work in consumer
-  internet. Decisions and trade-offs, not project summaries.
+  Product case studies on consumer growth, monetisation and platform work.
+  Decisions and trade-offs, not project summaries.
 
-# Change this one line if you ever move to a custom domain.
 url: "https://ashishsrivastava1406.github.io"
 baseurl: ""
-header_pages: []
 
-theme: minima
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
