@@ -1,13 +1,14 @@
 ---
 layout: page
+published: false   # change to true when this one is ready
 permalink: /zombie-perception/
-published: false   # <-- change to true when this one is ready
 title: "Zombie Perception"
 company: "Flutter Entertainment (Junglee Games)"
-period: ""
 role: "Senior Product Manager, Consumer Growth and Platform"
-summary: "TODO"
+period: ""
+summary: "What players believed was happening in the product, and what the data showed was happening."
 ---
+
 
 ## The situation
 

@@ -1,13 +1,14 @@
 ---
 layout: page
+published: false   # change to true when this one is ready
 permalink: /f2p-revamp/
-published: false   # <-- change to true when this one is ready
-title: "F2P Revamp — rebuilding monetisation after the revenue model became illegal"
+title: "F2P Revamp"
 company: "Flutter Entertainment (Junglee Games)"
-period: "2023–2024"
 role: "Senior Product Manager, Consumer Growth and Platform"
-summary: "India banned real money gaming. The entire revenue model went to zero overnight. This is how we chose what to build in its place, and in what order."
+period: ""
+summary: "Selecting and sequencing four monetisation models under a regulatory constraint, after a national ban removed the existing revenue."
 ---
+
 
 ## The situation
 

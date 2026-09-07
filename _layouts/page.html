@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<header class="band">
+  <div class="wrap">
+    <div class="mast">
+      <a class="name" href="{{ site.baseurl }}/">Ashish Srivastava</a>
+      <nav>
+        <a href="{{ site.baseurl }}/#case-studies">Case studies</a>
+        <a href="https://linkedin.com/in/ashishsrivastava">LinkedIn</a>
+        <a href="mailto:{{ site.email }}">Email</a>
+      </nav>
+    </div>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="standfirst">{{ page.summary }}</p>{% endif %}
+    <div class="facts">
+      {% if page.company %}<span>{{ page.company }}</span>{% endif %}
+      {% if page.role %}<span>{{ page.role }}</span>{% endif %}
+      {% if page.period %}<span>{{ page.period }}</span>{% endif %}
+    </div>
+  </div>
+</header>
+<main class="article"><div class="wrap"><div class="prose">{{ content }}</div></div></main>

@@ -1,13 +1,14 @@
 ---
 layout: page
+published: false   # change to true when this one is ready
 permalink: /recommendations/
-published: false   # <-- change to true when this one is ready
-title: "Recommendations — a ranked list is not a recommendation"
+title: "Recommendations"
 company: "Flutter Entertainment (Junglee Games)"
-period: ""
 role: "Senior Product Manager, Consumer Growth and Platform"
-summary: "Building a recommendation engine across the conversion funnel. Double digit lift in checkout success, a step change in purchases per user, high single digit revenue per user at D7."
+period: ""
+summary: "Building a recommendation layer across the conversion funnel, and deciding what it should optimise for."
 ---
+
 
 ## The situation
 

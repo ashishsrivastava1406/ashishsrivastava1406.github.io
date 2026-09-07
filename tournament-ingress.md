@@ -1,13 +1,14 @@
 ---
 layout: page
+published: false   # change to true when this one is ready
 permalink: /tournament-ingress/
-published: false   # <-- change to true when this one is ready
 title: "Tournament Ingress"
 company: "Flutter Entertainment (Junglee Games)"
-period: ""
 role: "Senior Product Manager, Consumer Growth and Platform"
-summary: "TODO"
+period: ""
+summary: "The path between deciding to play and being seated, and where players fall out of it."
 ---
+
 
 ## The situation
 
